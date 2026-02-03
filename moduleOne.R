@@ -161,7 +161,61 @@ View(census_black)
 census$total_family_income[ census$age > 40] # Return vector of total family income with age above 40
 
 --------------------------------------------------------------------------------
-# Puzzle - Why is there an error?
-census$race_general[ censussd]
+# Puzzle #3- Why is there an error?
+census$race_general[ census$age > 40]
 
+# puzzle - new age
+age = census$age
+age_2030 = age + 30
+census_2030 = data.frame(census, age_2030)
+View(census_2030)
+View[census]
 
+--------------------------------------------------------------------------------
+# Puzzle #4 
+  
+# Puzzle #5: What are the different marriage statuses represented in our dataframe?
+ # What happens if you put a numerical variable into the levels function?
+levels(4) # You get Null
+  
+
+# There are two types of variables:
+  #Numerical(value are Numbers), Categorical(Words or Categories)
+
+# Levels function to see the levels(types) of a categorical variable(strings)
+levels( census$race_general)
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+# MODULE 1 TOPIC 5: Data Visualization ####
+  # Paired Data
+  # Print and read a scatterplot
+  # Export a scatterplot to writing software
+
+--------------------------------------------------------------------------------
+#Puzzle #1 For each of the following scenarios, are the data paired?
+  # (1) yes
+  # (2) no
+  # (3) no
+  
+--------------------------------------------------------------------------------
+# Paired data can be visualized in scatterplots
+
+# Variables for age and total family income columns
+age = census$age
+income = census$total_family_income
+# Create a scatterplot
+plot(x=age, y=income, main='Age to Income relation', xlab='age', ylab='income')
+  
+  
